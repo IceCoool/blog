@@ -9,8 +9,8 @@ npm install
 hexo-theme-next 下的config.yml文件改动
 
 * scheme: Mist
+* 这里要注意的是菜单栏的位置改动以及名称改动
 ```yml
-这里要注意的是菜单栏的位置改动以及名称改动
   menu:
   home: / || home
   archives: /archives/ || archive
@@ -23,4 +23,4 @@ hexo-theme-next 下的config.yml文件改动
 ```
 
 about-->resume
-关于-->简历 在主题下languages的配置文件
+关于-->简历 在主题下languages的配置文件zh-Hans.yml
