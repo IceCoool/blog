@@ -1,11 +1,11 @@
 ---
 title: vuex-初体验
-date: 2017-12-09 16:56:02
+date: 2018-01-13 16:56:02
 tags:
 categories:
 ---
 
-一个vue项目的开发刚刚结束，其中有许多地方用到了组件之间的通信，虽有props，$on与$emit可以解决，但是趁这段时间了解了一下vuex的实现，感觉还是很方便的，这里我就向大家介绍一下vuex的使用。
+一个vue项目的开发刚刚结束，其中有许多地方用到了组件之间的通信，虽有props，eventbus可以解决，但是趁这段时间了解了一下vuex的实现，感觉还是很方便的，这里我就向大家介绍一下vuex的使用。
 
 <!-- more -->
 
@@ -243,4 +243,87 @@ action 的存在是为了处理异步操作，因为在mutation中必须是同�
 Action 类似于 mutation，不同的在于：
   * Action 提交的是 mutation，而不是直接变更状态。
   * Action 可以包含任意异步操作。
+
+我们来注册一个action
+```javascript
+// store/index.js
+
+    mutations: {
+        addCount(state, obj) {
+            state.count += obj.num
+        },
+        act(state) {
+            state.count += 1
+            alert(state.count)
+        }
+    },
+    actions: {
+        carryCount({ commit }) {
+            setTimeout(function() {
+                commit('act')
+            }, 1000)
+        }
+    }
+```
+
+```html
+<span @click="carryCount">action</span>
+
+<script>
+import { mapState, mapGetters, mapMutations, mapActions} from "vuex";
+export default {
+  methods: {
+    ...mapActions(['carryCount'])
+  }
+};
+</script>
+
+```
+
+### module
+
+如果项目过大，store中的state，mutations等可能会有很多，导致store显得相当臃肿，module就是解决这个问题的。
+
+在store下新建moduleA.js
+```javascript
+const moduleA = {
+    namespaced: true,
+    state: {},
+    mutations: {},
+    getters: {},
+    actions: {}
+}
+export default moduleA;
+
+```
+
+namespaced-命名空间，为true会解决不同module命名冲突的问题。
+
+在store/index.js中
+```javascript
+import moduleA from './moduleA'
+
+const store = new Vuex.Store({
+    modules: {
+        moduleA
+    }
+})
+```
+
+在组件中使用的时候和之前基本一样，注意的是在辅助函数中，需要将module的属性名加上，区分module，如下：
+
+```javascript
+<script>
+export default {
+    computed: {
+        ...mapState('moduleA',{
+            count: "count"
+        }),
+    },
+    methods: {
+        ...mapMutations('moduleA',["addCount"]),
+    }
+};
+</script>
+```
 
