@@ -83,6 +83,6 @@ deploy:
 
 # 端口号设置
 server:
-  port: 3000
+  port: 3333
   compress: true
   header: true  

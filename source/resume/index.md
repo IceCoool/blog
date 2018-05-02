@@ -24,11 +24,13 @@ date: 2018-03-10 17:13:38
 
 > <font size=3>职业技能</font>
 
-  * <font size=3>熟练使用Vue以及Vue相关的插件如：elementUi进行快速的开发；</font>
-  * <font size=3>熟悉vuex的使用；</font>
+  * <font size=3>熟练使用Vue，vuex；</font>
+  * <font size=3>熟练使用javascript，jquery；</font>
   * <font size=3>熟悉webpack，可以根据vue-cli进行单页面项目的开发；</font>
   * <font size=3>熟练掌握HTML+CSS网页布局，熟悉HTML5和CSS3的新特性；</font>
   * <font size=3>熟悉es6语法，了解新特性；</font>
+  * <font size=3>熟悉node.js；</font>
+  * <font size=3>熟练使用svn，git版本管理工具；</font>
   * <font size=3>能够使用rem和媒体查询完成响应式布局；</font>
 
 ---
