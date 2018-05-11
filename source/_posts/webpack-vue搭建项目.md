@@ -1,5 +1,5 @@
 ---
-title: webpack+vue搭建项目
+title: webpack-vue搭建项目
 date: 2017-07-13 17:54:14
 tags:
 categories:
@@ -437,14 +437,3 @@ module.exports = merge(common, {
   },
  ```
  OK，大功告成！   
-
-
-
-
-
-
-
-
-
-
-
