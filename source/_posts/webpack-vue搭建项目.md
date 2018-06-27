@@ -436,4 +436,5 @@ module.exports = merge(common, {
     "git": "rm -rf dist/* && webpack --config webpack.prod.js"
   },
  ```
- OK，大功告成！   
+ OK，大功告成！  
+ 最后附一个地址供参考 讲的很详细 [webpack-vue](https://www.jianshu.com/p/f05269760d84)

@@ -27,7 +27,7 @@ date: 2018-03-10 17:13:38
   * <font size=3>熟练使用Vue，vuex；</font>
   * <font size=3>熟练使用javascript，jquery；</font>
   * <font size=3>熟悉webpack，可以使用webpack+vue进行单页面项目的开发；</font>
-  * <font size=3>熟悉node.js；了解koa；</font>
+  * <font size=3>熟悉node.js，了解koa；</font>
   * <font size=3>熟悉es6语法，了解新特性；</font>
   * <font size=3>熟练掌握HTML+CSS网页布局，熟悉HTML5和CSS3的新特性；</font>
   * <font size=3>熟练使用svn，git版本管理工具；</font>
