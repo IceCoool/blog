@@ -94,8 +94,10 @@ hexo deploy
 稍等几分钟，在浏览器中输入`http://yourgithubname.github.io`就可以看到你的个人博客啦
 
 ### 写文章部分
-
-自行查看 [hexo](https://hexo.io/zh-cn/docs/writing.html)官网
+```
+hexo new name
+```
+可自行查看 [hexo](https://hexo.io/zh-cn/docs/writing.html)官网
 `markdown` 语法 [介绍](https://www.jianshu.com/p/b03a8d7b1719)
 
 ### 主题设置
