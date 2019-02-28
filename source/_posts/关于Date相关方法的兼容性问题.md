@@ -139,7 +139,7 @@ function seeCookie() {
 结果如下
 ![](/images/IEcookie3.png)
 莫名其妙的好了！！！
-虽然最后还是没有发现是什么原因，只能归咎于`toLocaleDateString`有问题，至于什么问题，没想清楚。。只能告诉自己以后慎用吧。
+后来才发现，`toLocaleDateString`这个方法IE10及以下的版本是没有问题的，但是IE11和IE Edge使用则会出现上述问题，嗯。。为什么越高的版本会出现不兼容低版本的情况，不明白。。。
 
 
 
